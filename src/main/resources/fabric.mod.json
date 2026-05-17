@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "stackz",
+	"version": "${version}",
+	"name": "Stackz",
+	"description": "Modifies stack sizes for various containers and items.",
+	"authors": [
+		"justfatlard"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/stackz/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.justfatlard.stackz.Stackz"
+		]
+	},
+	"mixins": [
+		"stackz.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
