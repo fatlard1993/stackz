@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 /**
  * Raises the ItemStackTemplate.MAP_CODEC count range from [1, 99] to [1, MAX_VALUE].
- * Templates are used for recipes and loot tables — need the same cap raise.
+ * Templates are used for recipes and loot tables, which need the same cap raise.
  */
 @Mixin(ItemStackTemplate.class)
 public abstract class ItemStackTemplateCodecMixin {

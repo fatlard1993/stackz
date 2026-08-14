@@ -8,10 +8,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
  * Sets the default container stack limit to unlimited.
- * In MC 26.1, getMaxStackSize() is a default method on the Container interface
- * and is no longer overridden by individual block entity classes.
- * Specific containers (hoppers, dispensers, furnaces) override this
- * back down to 64 to preserve redstone and automation behavior.
+ *
+ * In MC 26.1, getMaxStackSize() is a default method on the Container interface,
+ * not overridden by individual block entity classes, so this single injection
+ * covers every container. Automation containers (hopper, dispenser, furnace,
+ * brewing stand, crafter, minecart hopper) restore vanilla 64 by soft
+ * implementation: their mixins add a plain public getMaxStackSize() to the
+ * concrete class, which wins over this interface default.
  */
 @Mixin(Container.class)
 public interface ContainerMixin {

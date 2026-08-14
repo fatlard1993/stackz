@@ -4,12 +4,9 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 
 /**
- * Furnaces (including blast furnaces and smokers) keep vanilla stack size (64).
- * Comparator signal integrity and automation timing depend on predictable limits.
- *
- * In MC 26.1, getMaxStackSize() is only a default method on Container
- * and is not overridden in AbstractFurnaceBlockEntity, so we add it as
- * a soft implementation to override the unlimited default from ContainerMixin.
+ * Furnaces (including blast furnaces and smokers) keep vanilla stack size (64):
+ * comparator signal integrity and automation timing depend on predictable limits.
+ * Soft implementation; see ContainerMixin for the mechanism.
  */
 @Mixin(AbstractFurnaceBlockEntity.class)
 public abstract class AbstractFurnaceBlockEntityMixin {

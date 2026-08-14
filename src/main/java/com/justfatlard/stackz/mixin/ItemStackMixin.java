@@ -26,7 +26,7 @@ public interface ItemStackMixin {
 		}
 		// Integer.MAX_VALUE overflows when vanilla's /give command multiplies by 100
 		// (Integer.MAX_VALUE * 100 wraps to -100, giving "cannot give more than -100").
-		// Integer.MAX_VALUE / 100 = 21,474,836 — still effectively unlimited.
+		// Integer.MAX_VALUE / 100 = 21,474,836; still effectively unlimited.
 		cir.setReturnValue(Integer.MAX_VALUE / 100);
 	}
 }

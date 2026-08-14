@@ -12,19 +12,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 /**
  * Replaces the entire item decoration pass with a compact, scaled abbreviation.
  *
- * We inject at HEAD of BOTH overloads:
- *   • 4-arg — called by the hotbar render path
- *   • 5-arg — called directly by AbstractContainerScreen (inventory); it is
- *             the real implementation that the 4-arg delegates to with null.
+ * Injects at HEAD of both overloads: the 4-arg (hotbar render path) and the
+ * 5-arg (called directly by AbstractContainerScreen; the real implementation
+ * that the 4-arg delegates to with null).
  *
  * Anchor strategy: translate to (x+17, y+9), scale, then draw the label at
- * (-textWidth, 0).  The right edge of the text is always at x+17 regardless
+ * (-textWidth, 0). The right edge of the text is always at x+17 regardless
  * of whether pose.scale is honoured by the text renderer, preventing overflow
- * into adjacent slots.  At SCALE=0.75 the text is 6 px tall and sits from
- * y+9 to y+15 — visually in the bottom-right corner of the slot.
+ * into adjacent slots. At SCALE=0.75 the text is 6 px tall and sits from
+ * y+9 to y+15, in the bottom-right corner of the slot.
  *
  * Trade-off: item bar (durability) and cooldown overlay are also suppressed.
- * That is intentional — stackz only unlocks non-durability items, so bars
+ * That is intentional: stackz only unlocks non-durability items, so bars
  * never appear on affected stacks anyway.
  */
 @Mixin(GuiGraphicsExtractor.class)
