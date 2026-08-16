@@ -3,6 +3,8 @@ package com.justfatlard.stackz.mixin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.BundleContents;
+import org.apache.commons.lang3.math.Fraction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -53,7 +55,7 @@ public abstract class BundleContentsMutableMixin {
 			target = "Lnet/minecraft/world/item/component/BundleContents$Mutable;getMaxAmountToAdd(Lorg/apache/commons/lang3/math/Fraction;)I"
 		)
 	)
-	private int stackz$unlimitedPerType(Object instance, Object itemWeight) {
+	private int stackz$unlimitedPerType(BundleContents.Mutable instance, Fraction itemWeight) {
 		return Integer.MAX_VALUE;
 	}
 
@@ -82,7 +84,7 @@ public abstract class BundleContentsMutableMixin {
 			target = "Lnet/minecraft/world/item/component/BundleContents$Mutable;getMaxAmountToAdd(Lorg/apache/commons/lang3/math/Fraction;)I"
 		)
 	)
-	private int stackz$unlimitedPerTypeTransfer(Object instance, Object itemWeight) {
+	private int stackz$unlimitedPerTypeTransfer(BundleContents.Mutable instance, Fraction itemWeight) {
 		return Integer.MAX_VALUE;
 	}
 
