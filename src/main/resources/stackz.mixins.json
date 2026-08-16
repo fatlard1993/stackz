@@ -17,9 +17,6 @@
 		"MinecartHopperMixin",
 		"ComparatorSignalMixin"
 	],
-	"client": [
-		"GuiGraphicsExtractorMixin"
-	],
 	"injectors": {
 		"defaultRequire": 1
 	}

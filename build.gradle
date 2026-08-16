@@ -11,12 +11,9 @@ base {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
 	mods {
 		"stackz" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 }
