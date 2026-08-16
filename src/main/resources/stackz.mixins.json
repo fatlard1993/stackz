@@ -15,7 +15,8 @@
 		"BundleContentsMutableMixin",
 		"BundleItemMixin",
 		"MinecartHopperMixin",
-		"ComparatorSignalMixin"
+		"ComparatorSignalMixin",
+		"SimpleMutableContainerAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

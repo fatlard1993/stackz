@@ -3,9 +3,7 @@ package com.justfatlard.stackz.mixin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -22,9 +20,14 @@ import java.util.List;
 public abstract class BundleContentsMutableMixin {
 	private static final int MAX_ITEM_TYPES = 9;
 
-	@Shadow
-	@Final
-	private List<ItemStack> items;
+	/**
+	 * The item list lives on the superclass, {@code SimpleMutableContainer}, so a
+	 * shadow declared here never resolves. Reached through an accessor on the
+	 * class that actually owns it instead.
+	 */
+	private List<ItemStack> stackz$items() {
+		return ((SimpleMutableContainerAccessor) (Object) this).stackz$items();
+	}
 
 	/**
 	 * Guard tryInsert: reject new item types when we already have 9.
@@ -34,7 +37,7 @@ public abstract class BundleContentsMutableMixin {
 	private void stackz$limitBundleTypes(ItemStack stack, CallbackInfoReturnable<Integer> cir) {
 		if (stack.isEmpty()) return;
 		if (hasMatchingType(stack)) return;
-		if (items.size() >= MAX_ITEM_TYPES) {
+		if (stackz$items().size() >= MAX_ITEM_TYPES) {
 			cir.setReturnValue(0);
 		}
 	}
@@ -64,7 +67,7 @@ public abstract class BundleContentsMutableMixin {
 		ItemStack slotItem = slot.getItem();
 		if (slotItem.isEmpty()) return;
 		if (hasMatchingType(slotItem)) return;
-		if (items.size() >= MAX_ITEM_TYPES) {
+		if (stackz$items().size() >= MAX_ITEM_TYPES) {
 			cir.setReturnValue(0);
 		}
 	}
@@ -84,7 +87,7 @@ public abstract class BundleContentsMutableMixin {
 	}
 
 	private boolean hasMatchingType(ItemStack stack) {
-		for (ItemStack existing : items) {
+		for (ItemStack existing : stackz$items()) {
 			if (ItemStack.isSameItemSameComponents(existing, stack)) {
 				return true;
 			}
