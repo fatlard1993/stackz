@@ -12,14 +12,10 @@ A Fabric mod that rebalances stack sizes throughout the game. Player inventories
 - **Compact stack count display**: on clients running [Pandorical](../pandorical), large stack counts render as abbreviated labels (e.g. `12k`, `3.4m`, `1b`) with an exact-count tooltip; that presentation now lives in Pandorical, so stackz itself ships no client code. Vanilla clients still handle oversized counts correctly, they just draw the raw number
 - **Uncapped save/load**: item stack codecs are patched so large stacks serialize and deserialize correctly instead of being clamped
 
-## Requirements
-
-Targets the Minecraft, Fabric Loader, and Fabric API versions declared in this mod's `gradle.properties`; check there for the exact currently-supported version.
-
 ## Installation
 
-Install server-side alongside its declared dependencies (see `fabric.mod.json`). No client installation is needed; clients with Pandorical additionally get the compact count labels.
+Install server-side alongside its declared dependencies (see `fabric.mod.json`). Vanilla clients need nothing. Version targets live in `gradle.properties` (Minecraft, loader, Fabric API) and `fabric.mod.json` (Java).
 
 ## License
 
-MIT
+MIT, see [LICENSE](LICENSE).
