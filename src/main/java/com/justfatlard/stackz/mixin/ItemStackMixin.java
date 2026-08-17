@@ -23,6 +23,17 @@ public interface ItemStackMixin {
 		Object self = this;
 		if (self instanceof ItemStack stack) {
 			if (stack.has(DataComponents.MAX_DAMAGE)) return;
+
+			// Anything that carries its own contents keeps vanilla's cap of one.
+			// Vanilla does not limit bundles and shulker boxes to a single item out
+			// of caution: the contents live in a component on the stack, so two of
+			// them sharing one stack share one set of contents. Filling a stack of
+			// three bundles gives three bundles holding the same items, which is a
+			// duplication bug wearing a convenience feature's clothes. It also makes
+			// them impossible to separate, since splitting a stack copies the
+			// component rather than dividing it.
+			if (stack.has(DataComponents.BUNDLE_CONTENTS)) return;
+			if (stack.has(DataComponents.CONTAINER)) return;
 		}
 		// Integer.MAX_VALUE overflows when vanilla's /give command multiplies by 100
 		// (Integer.MAX_VALUE * 100 wraps to -100, giving "cannot give more than -100").
