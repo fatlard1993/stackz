@@ -1,24 +1,25 @@
 {
-	"required": true,
-	"package": "com.justfatlard.stackz.mixin",
-	"compatibilityLevel": "JAVA_25",
-	"mixins": [
-		"ItemStackMixin",
-		"ContainerMixin",
-		"HopperBlockEntityMixin",
-		"DispenserBlockEntityMixin",
-		"AbstractFurnaceBlockEntityMixin",
-		"BrewingStandBlockEntityMixin",
-		"CrafterBlockEntityMixin",
-		"ItemStackCodecMixin",
-		"ItemStackTemplateCodecMixin",
-		"BundleContentsMutableMixin",
-		"BundleItemMixin",
-		"MinecartHopperMixin",
-		"ComparatorSignalMixin",
-		"SimpleMutableContainerAccessor"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "com.justfatlard.stackz.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ItemStackMixin",
+    "ContainerMixin",
+    "HopperBlockEntityMixin",
+    "DispenserBlockEntityMixin",
+    "AbstractFurnaceBlockEntityMixin",
+    "BrewingStandBlockEntityMixin",
+    "CrafterBlockEntityMixin",
+    "ItemStackCodecMixin",
+    "ItemStackTemplateCodecMixin",
+    "BundleContentsMutableMixin",
+    "BundleItemMixin",
+    "MinecartHopperMixin",
+    "ComparatorSignalMixin",
+    "SimpleMutableContainerAccessor",
+    "ItemParticleStackMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
