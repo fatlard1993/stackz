@@ -9,7 +9,7 @@ A Fabric mod that rebalances stack sizes throughout the game. Player inventories
 - **Durability and container items stack normally**: tools, weapons and armor (anything with a max-damage component) keep vanilla stacking, and so do bundles and shulker boxes, whose contents live on the stack itself. Two in one stack would share one set of contents
 - **Bundles rebalanced by type, not weight**: bundles hold up to 9 distinct item types with unlimited quantity per type, instead of vanilla's weight-based capacity; the bundle's fullness bar reflects how many of the 9 type slots are used
 - **Comparator signal fix**: containers with unlimited stack sizes still report a non-zero redstone comparator signal when they contain any items, instead of the 0 vanilla's formula would otherwise produce; capped containers keep the full 0-15 signal range
-- **Compact stack count display**: on clients running [Pandorical](../pandorical), large stack counts render as abbreviated labels (e.g. `12k`, `3.4m`, `1b`) with an exact-count tooltip; that presentation now lives in Pandorical, so stackz itself ships no client code. Vanilla clients still handle oversized counts correctly, they just draw the raw number
+- **Compact stack count display**: on clients running [Pandorical](../pandorical), large stack counts render as abbreviated labels (e.g. `12k`, `3.4m`, `1b`) with an exact-count tooltip; the presentation is Pandorical's, so stackz itself ships no client code. Vanilla clients handle oversized counts correctly, they just draw the raw number
 - **Uncapped save/load**: item stack codecs are patched so large stacks serialize and deserialize correctly instead of being clamped
 
 ## Installation
