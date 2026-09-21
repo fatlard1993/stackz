@@ -1,0 +1,18 @@
+{
+	"schemaVersion": 1,
+	"id": "stackz-gametest",
+	"version": "1.0.0",
+	"name": "Stackz smoke test",
+	"description": "Loads the mod, joins a world, and fails if anything on the way threw.",
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"com.justfatlard.stackz.gametest.SmokeTest"
+		]
+	},
+	"depends": {
+		"stackz": "*",
+		"fabric-client-gametest-api-v1": "*"
+	}
+}

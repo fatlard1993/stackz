@@ -1,0 +1,18 @@
+{
+	"overview": [
+		"Storage holds as much as you can throw at it: chests, barrels, ender chests, shulker boxes and your own inventory stack a single item into the millions.",
+		"Hoppers, droppers, furnaces and everything else automation touches keep vanilla's 64, so sorters and comparator clocks work exactly as they did."
+	],
+	"versions": {
+		"1.0.2": [
+			"Bundles hold up to 9 kinds of item with 99 of each, and a bundle carrying more than that from an older world is split into readable portions when you join."
+		],
+		"1.0.1": [
+			"Bundles and shulker boxes keep vanilla's stacking, so two of them never end up sharing one set of contents, and eating from a huge stack shows the food rather than a missing texture.",
+			"Large counts are drawn short, 12k or 3.4m, by Pandorical on the client."
+		],
+		"1.0.0": [
+			"The first release: unlimited stacking in storage, vanilla stacks kept everywhere redstone reads them, and comparators still give a signal out of a container holding millions."
+		]
+	}
+}
