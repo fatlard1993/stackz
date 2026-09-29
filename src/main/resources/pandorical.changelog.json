@@ -4,6 +4,10 @@
 		"Hoppers, droppers, furnaces and everything else automation touches keep vanilla's 64, so sorters and comparator clocks work exactly as they did."
 	],
 	"versions": {
+		"1.0.3": [
+			"A hopper fills a furnace, dropper or crafter only as far as that container holds.",
+			"It read the item's own stack size instead of the container's, so a capped slot crept past 64 a piece at a time."
+		],
 		"1.0.2": [
 			"Bundles hold up to 9 kinds of item with 99 of each.",
 			"A bundle carrying more from an older world is split into readable portions when you join."

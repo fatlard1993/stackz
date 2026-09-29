@@ -6,6 +6,7 @@
     "ItemStackMixin",
     "ContainerMixin",
     "HopperBlockEntityMixin",
+    "HopperTransferMixin",
     "DispenserBlockEntityMixin",
     "AbstractFurnaceBlockEntityMixin",
     "BrewingStandBlockEntityMixin",
