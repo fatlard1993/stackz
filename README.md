@@ -14,6 +14,10 @@ A Fabric mod that rebalances stack sizes throughout the game. Player inventories
 - **Uncapped save/load**: item stack codecs are patched so large stacks serialize and deserialize correctly instead of being clamped
 - **Eating from a large stack**: the crumb particles from a stack over 64 are sent as a single item, so a vanilla client draws the food rather than the missing-texture square
 
+## Installing
+
+Server-side only: players connect with an unmodified client. Pandorical is optional; on a client running it, big counts are drawn short.
+
 ## Development
 
 Installing is in [DEVELOPMENT.md](DEVELOPMENT.md).
