@@ -1,0 +1,48 @@
+{
+  "demo": {
+    "name": "Stackz",
+    "icon": "minecraft:cobblestone",
+    "about": [
+      "Your pack and your chests hold millions of one item in a slot, while hoppers, furnaces and the rest of the redstone kit stay at 64.",
+      "Look at the stacks you're carrying and drop them into a chest, put a hopper under it and see its slots stop at 64, and fill a bundle: nine kinds, up to 99 of each."
+    ]
+  },
+  "pvp_preset": 1,
+  "needs": ["stackz"],
+  "preset": {
+    "name": "Stackz",
+    "icon": "minecraft:cobblestone",
+    "pvp": false,
+    "game_mode": "survival",
+    "entry_kit": [
+      {"slot": 0, "item": {"id": "minecraft:cobblestone", "count": 10000}},
+      {"slot": 1, "item": {"id": "minecraft:oak_log", "count": 2500}},
+      {"slot": 2, "item": {"id": "minecraft:torch", "count": 1000}},
+      {"slot": 3, "item": {"id": "minecraft:chest", "count": 4}},
+      {"slot": 4, "item": {"id": "minecraft:hopper", "count": 2}},
+      {"slot": 5, "item": {"id": "minecraft:bundle", "count": 1}},
+      {"slot": 6, "item": {"id": "minecraft:bread", "count": 300}},
+      {"slot": 7, "item": {"id": "minecraft:furnace", "count": 1}},
+      {"slot": 8, "item": {"id": "minecraft:coal", "count": 640}},
+      {"slot": 9, "item": {"id": "minecraft:dirt", "count": 5000}},
+      {"slot": 10, "item": {"id": "minecraft:sand", "count": 3000}},
+      {"slot": 11, "item": {"id": "minecraft:wheat_seeds", "count": 400}},
+      {"slot": 12, "item": {"id": "minecraft:iron_ingot", "count": 256}},
+      {"slot": 13, "item": {"id": "minecraft:redstone", "count": 500}},
+      {"slot": 14, "item": {"id": "minecraft:feather", "count": 150}},
+      {"slot": 15, "item": {"id": "minecraft:apple", "count": 120}},
+      {"slot": 16, "item": {"id": "minecraft:string", "count": 200}},
+      {"slot": 17, "item": {"id": "minecraft:gravel", "count": 900}},
+      {"slot": 18, "item": {"id": "minecraft:oak_planks", "count": 4000}}
+    ],
+    "respawn_kit": "entry",
+    "goal": "time",
+    "mobs": "off",
+    "life": 15,
+    "size": 2,
+    "world": "overworld",
+    "shape": "flat",
+    "biome": "minecraft:plains",
+    "weather": "clear"
+  }
+}
