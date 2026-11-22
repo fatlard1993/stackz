@@ -3,7 +3,7 @@
 	"id": "stackz",
 	"version": "${version}",
 	"name": "Stackz",
-	"description": "Modifies stack sizes for various containers and items.",
+	"description": "Bigger stacks for containers and items",
 	"authors": [
 		"justfatlard"
 	],
