@@ -4,6 +4,9 @@
 		"Hoppers, droppers, furnaces and everything else automation touches keep vanilla's 64, so sorters and comparator clocks work exactly as they did."
 	],
 	"versions": {
+		"1.0.8": [
+			"Describes itself in one short line of what it adds."
+		],
 		"1.0.7": [
 			"Asking an item or a container how much it stacks to no longer builds a callback object each time, which hoppers do constantly."
 		],
